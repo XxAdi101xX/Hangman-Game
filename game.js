@@ -1,4 +1,4 @@
-// This array holds the words we are going to choose from.
+// This array holds the words we are going to choose from. This can be modified to add or remove words at anytime!
 var words = ['tarzan', 'philosopher', 'zombie', 'monkey', 'scientist'];
 
 function chooseWord () {
@@ -28,6 +28,7 @@ function guessLetter( letter, shown, answer ) {
 // The above is just the basic rules to the game
 
 // Here we draw the induvidual parts using jQuery
+
 function drawHead () {
   $('.draw-area').append( $('<div>').addClass("body-part head") );
 }
@@ -57,23 +58,27 @@ function drawRightLeg() {
  $('.legbox').prepend( $('<div/>').addClass("body-part rightleg") );   
 }
 
+// this drawSequence orders how to animate the hangman.
 var drawSequence = [ drawHead,drawTorso,drawLeftArm,drawRightArm,drawLeftLeg,drawRightLeg ];
 
 function wrongLetter ( letter ) {
     $('#wrong-letters').append(
         $('<span/>').addClass('guessed-letter').text(letter));
 }
+
 function resetUI () {
     $('.body-part').remove();
     $('.guessed-letter').remove();
     $('.shown-letter').remove();
 }
+
 function drawWord( answer ) {
     for ( i in answer ) {
 	$('.word-display').append(
 	    $('<span/>').addClass('shown-letter').html('&nbsp;'));
     }
 }
+
 function updateWord(answer) {
     $k = $('.shown-letter:first');
     for (i in answer) {
@@ -88,7 +93,7 @@ function updateWord(answer) {
 
 // **************************************//
 
-// The below is the game beginning functions
+// The below is the game initializing and resetting functions
 function resetGame () {
     resetUI();
     gameAnswer = chooseWord();
