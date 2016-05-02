@@ -1,5 +1,5 @@
 // This array holds the words we are going to choose from. This can be modified to add or remove words at anytime!
-var words = ['tarzan', 'philosopher', 'zombie', 'monkey', 'scientist'];
+var words = ['tarzan', 'philosopher', 'zombie', 'monkey', 'scientist' ];
 
 function chooseWord () {
     return words[Math.floor(Math.random() * words.length)];
