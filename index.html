@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  <title>Hangman</title>
+</head>
+<body>
+<h1>Hangman</h1>
+<div class='topmatter'> 
+  <div id="info">
+  <p>Welcome to Hangman.<br> The rules are simple. <br>Guess the word correctly.<br> Or the man hangs.<br> Good luck.</p>
+  <button class="reset btn btn-default">Press to begin</button>
+</div>
+      <div class='hang-container'>
+        <div class='scaffolding-top'></div>
+        <div class='scaffolding-left'></div>
+    
+        <div class='draw-area'>
+          <div class='rope'></div>
+        </div>
+    
+        <div class='scaffolding-base'></div>
+      </div>
+      <div class='side-container'>
+        <div class='container-title'>Guess A Letter!</div>
+        <div class='input-area'>
+          <input id='letter-input' type='text' maxlength='1'/>
+        </div>
+      </div>
+    
+      <div class='side-container'>
+        <div class='container-title'>Letters Guessed</div>
+        <div id="wrong-letters" class='input-area'></div>
+      </div>
+    </div>
+    <div class='bottommatter'>
+        <div class='word-box'>
+            <div class='word-display'>
+            </div>
+        </div>
+    </div> 
+    </body>
+    </html>
