@@ -1,5 +1,5 @@
 # Hangman-Game
-Simple hangman game that I created with the help of Codecademy. 
+Simple hangman game that I created with some guidance from Codecademy's JS course.
 
 You can play it here at: https://codepen.io/XxAdi101xX/pen/NNEbYg
 
